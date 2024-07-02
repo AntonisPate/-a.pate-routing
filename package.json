@@ -1,16 +1,29 @@
 {
-  "name": "router",
-  "version": "1.0.0",
+  "name": "express-folder-routing",
+  "version": "1.0.3",
   "main": "index.js",
   "scripts": {
     "start": "nodemon - exec 'ts-node' src/app.ts",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "npm run lint && npm test"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AntonisPate/-a.pate-routing.git"
+  },
+  "husky": {
+   "hooks": {
+    "pre-commit": "npm run precommit"
+   }
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "a.pate",
+  "license": "MIT",
+  "description": "File based routing for express framework",
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/fs-extra": "^11.0.4",
@@ -18,10 +31,8 @@
     "@typescript-eslint/parser": "^7.14.1",
     "eslint": "^8.57.0",
     "express": "^4.19.2",
+    "husky": "^9.0.11",
     "nodemon": "^3.1.4",
     "typescript": "^5.5.2"
-  },
-  "dependencies": {
-    "fs-extra": "^11.2.0"
   }
 }
