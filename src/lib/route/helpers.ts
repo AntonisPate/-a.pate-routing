@@ -39,7 +39,6 @@ export const initializeFolders = (
         }
       }
     } else {
-      var x = 5;
       const routePath: string = getRoutePath(routeName);
       const actions: any = require(directoryPath);
       if (Object.keys(actions).length > 0) {
